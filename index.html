@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="button" id="btn">
+            Click me to Change Color
+        </button>
+    </div>
+</body>
+<style>
+    .container {
+        margin: auto;
+        width: 200px;
+    }
+
+    .button {
+        size: 500px;
+        background-color: rgba(116, 116, 116, 0.664);
+        border: 2px solid black;
+        border-radius: 10px 50px;
+        color: black;
+        padding: 15px 32px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<script>
+    const button = document.getElementById("btn");
+    const body = document.body;
+    const colors = ['#297045', '#E07BE0', '#23C9FF', '#FCA17D', '#D6E681', '#820263', '#D90368', '#EADEDA', '#2E294E', '#FFD400', '#A4031F','#003F91','#86BBD8','#A11692','#FEFCFB'];
+    body.style.backgroundColor = colors[0];
+    button.addEventListener('click', changecolor);
+    function changecolor() {
+        const index = Math.floor(Math.random() * colors.length);
+        body.style.backgroundColor = colors[index];
+    }
+</script>
+
+</html>
