@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Change</title>
 </head>
-
 <body>
     <div class="container">
-        <button class="button" id="btn">
+        <button onclick="changecolor()" id="btn">
             Click me to Change Color
         </button>
     </div>
@@ -36,7 +35,7 @@
     const body = document.body;
     const colors = ['#ffffff','#297045', '#E07BE0', '#23C9FF', '#FCA17D', '#D6E681', '#820263', '#D90368', '#EADEDA', '#2E294E', '#FFD400', '#A4031F','#003F91','#86BBD8','#A11692','#FEFCFB'];
     body.style.backgroundColor = colors[0];
-    button.addEventListener('click', changecolor);
+    // button.addEventListener('click', changecolor);
     function changecolor() {
         const index = Math.floor(Math.random() * colors.length);
         body.style.backgroundColor = colors[index];
