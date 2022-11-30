@@ -15,9 +15,9 @@
     </div>
 </body>
 <style>
-    .container{
-        margin-top: 20%;
-        margin-left: 40%;
+    .container {
+        margin: auto;
+        width: 200px;
     }
     button {
         background-color: rgba(116, 116, 116, 0.664);
@@ -26,21 +26,24 @@
         color: black;
         padding: 15px 30px;
         font-size: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
         cursor: pointer;
     }
     button:active {
-            transform: scale(0.95);
-        }
-    button:active:hover{
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    button:active:hover {
         box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.664);
     }
 </style>
 <script>
     const button = document.getElementById("btn");
     const body = document.body;
-    const colors = ['#ffffff','#297045', '#E07BE0', '#23C9FF', '#FCA17D', '#D6E681', '#820263', '#D90368', '#EADEDA', '#2E294E', '#FFD400', '#A4031F','#003F91','#86BBD8','#A11692','#FEFCFB'];
+    const colors = ['#ffffff', '#297045', '#E07BE0', '#23C9FF', '#FCA17D', '#D6E681', '#820263', '#D90368', '#EADEDA', '#2E294E', '#FFD400', '#A4031F', '#003F91', '#86BBD8', '#A11692', '#FEFCFB'];
     body.style.backgroundColor = colors[0];
-    // button.addEventListener('click', changecolor);
     function changecolor() {
         const index = Math.floor(Math.random() * colors.length);
         body.style.backgroundColor = colors[index];
